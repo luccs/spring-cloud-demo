@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8002
 spring:
   application:
     name: spring-cloud-config-server
@@ -7,20 +7,20 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/ityouknow/spring-cloud-starter/     # 配置git仓库的地址
+          uri: https://github.com/luccs/spring-cloud-demo/     # 配置git仓库的地址
           search-paths: config-repo                             # git仓库地址下的相对地址，可以配置多个，用,分割。
-          username: yourname                                        # git仓库的账号
-          password: yourpass                                    # git仓库的密码
+          username: luccs                                        # git仓库的账号
+          password: luccs526hc                                    # git仓库的密码
   rabbitmq:
-    host: 192.168.0.6
+    host: localhost
     port: 5672
-    username: admin
+    username: springcloud
     password: 123456
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8000/eureka/   ## 注册中心eurka地址
+      defaultZone: http://localhost:8001/eureka/   ## 注册中心eurka地址
 
 
 management:
