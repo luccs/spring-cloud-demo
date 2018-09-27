@@ -11,4 +11,8 @@ spring:
           search-paths: spring-cloud-config-git/config-repo                             # git仓库地址下的相对地址，可以配置多个，用,分割。
           username: luccs                                             # git仓库的账号
           password: luccs526hc                                             # git仓库的密码
-          
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka,http://localhost:1112/eureka #配置服务注册中心
+        
